@@ -15,6 +15,8 @@ return array(
 
 	'debug' => true,
 
+	'cipher' => MCRYPT_RIJNDAEL_256,
+
 	/*
 	|--------------------------------------------------------------------------
 	| Application URL
@@ -65,7 +67,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'p6rVpSdnwt0f7DFEGbOiju1qKCNRxxn7',
 
 	/*
 	|--------------------------------------------------------------------------

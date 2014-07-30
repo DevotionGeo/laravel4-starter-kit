@@ -1,6 +1,7 @@
 <?php
 
 use Cartalyst\Sentry\Users\Eloquent\User as SentryUserModel;
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class User extends SentryUserModel {
 
@@ -9,8 +10,9 @@ class User extends SentryUserModel {
 	 *
 	 * @var bool
 	 */
-	protected $softDelete = true;
+	use SoftDeletingTrait;
 
+    protected $dates = ['deleted_at'];
 	/**
 	 * Returns the user full name, it simply concatenates
 	 * the user first and last name.
