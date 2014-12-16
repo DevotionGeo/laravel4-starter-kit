@@ -5,14 +5,10 @@ use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class User extends SentryUserModel {
 
-	/**
-	 * Indicates if the model should soft delete.
-	 *
-	 * @var bool
-	 */
 	use SoftDeletingTrait;
 
     protected $dates = ['deleted_at'];
+
 	/**
 	 * Returns the user full name, it simply concatenates
 	 * the user first and last name.
