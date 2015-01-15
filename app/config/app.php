@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'key' => 'M6IlpIOXagLcptrkgIwdiTYZZGijlh3j',
+	'key' => 'jKnqqFnua6R8HVC0kUXWaiTlH1apMz54',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -110,6 +110,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
 		'Cartalyst\Sentry\SentryServiceProvider',
+		'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
@@ -178,6 +179,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 		'Sentry'          => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 	),
 
