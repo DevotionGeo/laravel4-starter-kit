@@ -1,19 +1,16 @@
-# Please don't send any PR's as i'm not accepting them at this moment!
-
----
-
 ## Laravel 4 - Starter Kit
+
+Forked from [https://github.com/brunogaspar/laravel-starter-kit](https://github.com/brunogaspar/laravel-starter-kit) for laravel 4.0.x but maintained by me onwards..
 
 This is a Laravel 4 Starter Kit and it will help you getting started with Laravel 4.
 
-It includes examples on how to use the framework itself and how to use some
-packages, like the awesome [Sentry 2](https://github.com/cartalyst/sentry) package.
+It includes examples on how to use the framework itself.
 
 -----
 
 ## Included goodies
 
-* Twitter Bootstrap 2.3.2
+* Twitter Bootstrap 3.3.x
 * jQuery 1.10.2
 * Custom CLI Installer
 * Custom Error Pages:
@@ -31,12 +28,13 @@ packages, like the awesome [Sentry 2](https://github.com/cartalyst/sentry) packa
 	* Contact us page
 * Packages included:
 	* [Cartalyst Sentry 2 - Authentication and Authorization package](https://github.com/cartalyst/sentry)
+	* [Laravel Debugbar - Debugging tool for laravel](https://github.com/barryvdh/laravel-debugbar)
 
 -----
 
 ## Requirements
 
-- PHP 5.3.7 or later
+- PHP 5.4 or plus
 - MCrypt PHP Extension
 
 -----
@@ -46,11 +44,11 @@ packages, like the awesome [Sentry 2](https://github.com/cartalyst/sentry) packa
 ### 1) Downloading
 #### 1.1) Clone the Repository
 
-	git clone http://github.com/brunogaspar/laravel4-starter-kit your-folder
+	git clone http://github.com/dakshhmehta/laravel4-starter-kit your-folder
 
 #### 1.2) Download the Repository
 
-	https://github.com/brunogaspar/laravel4-starter-kit/archive/master.zip
+	https://github.com/dakshhmehta/laravel4-starter-kit/archive/master.zip
 
 -----
 
