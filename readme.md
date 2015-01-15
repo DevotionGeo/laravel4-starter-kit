@@ -1,19 +1,16 @@
-# Please don't send any PR's as i'm not accepting them at this moment!
-
----
-
 ## Laravel 4 - Starter Kit
+
+Forked from [https://github.com/brunogaspar/laravel-starter-kit](https://github.com/brunogaspar/laravel-starter-kit) for laravel 4.0.x but maintained by me onwards..
 
 This is a Laravel 4 Starter Kit and it will help you getting started with Laravel 4.
 
-It includes examples on how to use the framework itself and how to use some
-packages, like the awesome [Sentry 2](https://github.com/cartalyst/sentry) package.
+It includes examples on how to use the framework itself.
 
 -----
 
 ## Included goodies
 
-* Twitter Bootstrap 2.3.2
+* Twitter Bootstrap 3.3.x
 * jQuery 1.10.2
 * Custom CLI Installer
 * Custom Error Pages:
@@ -31,12 +28,13 @@ packages, like the awesome [Sentry 2](https://github.com/cartalyst/sentry) packa
 	* Contact us page
 * Packages included:
 	* [Cartalyst Sentry 2 - Authentication and Authorization package](https://github.com/cartalyst/sentry)
+	* [Laravel Debugbar - Debugging tool for laravel](https://github.com/barryvdh/laravel-debugbar)
 
 -----
 
 ## Requirements
 
-- PHP 5.3.7 or later
+- PHP 5.4 or plus
 - MCrypt PHP Extension
 
 -----
@@ -46,11 +44,11 @@ packages, like the awesome [Sentry 2](https://github.com/cartalyst/sentry) packa
 ### 1) Downloading
 #### 1.1) Clone the Repository
 
-	git clone http://github.com/brunogaspar/laravel4-starter-kit your-folder
+	git clone http://github.com/dakshhmehta/laravel4-starter-kit your-folder
 
 #### 1.2) Download the Repository
 
-	https://github.com/brunogaspar/laravel4-starter-kit/archive/master.zip
+	https://github.com/dakshhmehta/laravel4-starter-kit/archive/master.zip
 
 -----
 
@@ -110,20 +108,20 @@ After you being authenticated, you will be redirected back to the administration
  copies of this license document, and changing it is allowed as long
  as the name is changed.
 
-> DON'T BE A DICK PUBLIC LICENSE
+> DON'T BE A silly PUBLIC LICENSE
 > TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
- 1. Do whatever you like with the original work, just don't be a dick.
+ 1. Do whatever you like with the original work, just don't be a silly.
 
-     Being a dick includes - but is not limited to - the following instances:
+     Being a silly includes - but is not limited to - the following instances:
 
 	 1a. Outright copyright infringement - Don't just copy this and change the name.
-	 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.
-	 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.
+	 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a silly.
+	 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER silly.
 
  2. If you become rich through modifications, related works/services, or supporting the original work,
- share the love. Only a dick would make loads off this work and not buy the original works
+ share the love. Only a silly would make loads off this work and not buy the original works
  creator(s) a pint.
 
  3. Code is provided with no warranty. Using somebody else's code and bitching when it goes wrong makes
- you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
+ you a DONKEY silly. Fix the problem yourself. A non-silly would submit the fix back.
