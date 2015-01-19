@@ -9,6 +9,12 @@
 |
 */
 
+Route::group(array('prefix' => 'test'), function(){
+	Route::get('one', 'TestController@index');
+	Route::get('two', 'TestController@two');
+	Route::get('three', 'TestController@index');
+});
+
 Route::group(array('prefix' => 'admin'), function()
 {
 
@@ -142,3 +148,9 @@ Route::get('blog/{postSlug}', array('as' => 'view-post', 'uses' => 'BlogControll
 Route::post('blog/{postSlug}', 'BlogController@postView');
 
 Route::get('/', array('as' => 'home', 'uses' => 'BlogController@getIndex'));
+
+Route::group(array('prefix' => 'topics'), function(){
+	Route::get('/', 'TopicsController@showAll');
+	Route::get('/add', 'TopicsController@addTopic');
+	Route::post('/add', 'TopicsController@insertTopic');
+});
