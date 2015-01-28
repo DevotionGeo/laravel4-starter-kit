@@ -153,4 +153,7 @@ Route::group(array('prefix' => 'topics'), function(){
 	Route::get('/', 'TopicsController@showAll');
 	Route::get('/add', 'TopicsController@addTopic');
 	Route::post('/add', 'TopicsController@insertTopic');
+	Route::get('{topic_id}/edit', 'TopicsController@editTopic');
+	Route::post('{topic_id}/edit', 'TopicsController@updateTopic');
+	Route::get('{topic_id}/delete', 'TopicsController@deleteTopic');
 });
