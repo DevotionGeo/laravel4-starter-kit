@@ -27,19 +27,19 @@ Expense Trackings - @parent
 						<tr>
 							<th class="col-md-2">Date</th>
 							<th class="col-md-2">Amount</th>
-							<th class="col-md-6">Memo</th>
-							<th class="col-md-2"></th>
+							<th class="col-md-5">Memo</th>
+							<th class="col-md-3"></th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach($transactions as $transaction)
 						<tr>
-							<td>{{ $transaction->txn_datetime }}</td>
+							<td>{{ $transaction->txn_datetime->format(Config::get('app.datetime_format')) }}</td>
 							<td>Rs. {{ number_format($transaction->amount, 2) }}</td>
 							<td>{{ $transaction->memo }}</td>
 							<td>
-								<a href="#" class="btn btn-xs btn-info">Edit</a> 
-								<a href="{{ route('transactions.delete', $transaction->id) }}" class="btn btn-xs btn-danger">Delete</a> 
+								<a href="#" class="btn btn-xs btn-info">edit</a> 
+								<a href="{{ route('transactions.delete', $transaction->id) }}" class="btn btn-xs btn-danger">archive</a> 
 							</td>
 						</tr>
 						@endforeach

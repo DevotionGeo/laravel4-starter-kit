@@ -51,10 +51,25 @@ class TransactionsController extends AuthorizedController {
 	}
 
 	public function getReport(){
-		return View::make('frontend.transactions.report');
+		return View::make('frontend.transactions.report_form');
 	}
 
 	public function postReport(){
+		$users = Input::get('users', null);
+		$month = Input::get('month');
+		$year = Input::get('year');
 
+		if($users == null)
+			return Redirect::back()->with('error', 'Select atleast one user');
+
+		$users = User::whereIn('id', $users)->get();
+
+		foreach($users as &$user){
+			$user->transactions = $user->transactions()->period($month, $year)->get();
+			$user->transaction_total = $user->transactions()->period($month, $year)->sum('amount');
+		}
+
+		return View::make('frontend.transactions.report')
+			->with('data', $users);
 	}
 }
