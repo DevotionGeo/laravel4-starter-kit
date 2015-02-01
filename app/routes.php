@@ -142,3 +142,12 @@ Route::get('blog/{postSlug}', array('as' => 'view-post', 'uses' => 'BlogControll
 Route::post('blog/{postSlug}', 'BlogController@postView');
 
 Route::get('/', array('as' => 'home', 'uses' => 'BlogController@getIndex'));
+
+Route::group(array('prefix' => 'transactions'), function(){
+	Route::get('/', ['as' => 'transactions', 'uses' => 'TransactionsController@startApp']);
+	Route::post('/add', ['as' => 'transactions.add', 'uses' => 'TransactionsController@addTransaction']);
+	Route::get('{id}/delete', ['as' => 'transactions.delete', 'uses' => 'TransactionsController@deleteTransaction']);
+	Route::get('report', ['as' => 'transactions.report', 'uses' => 'TransactionsController@getReport']);
+	Route::post('report', ['as' => 'transactions.report', 'uses' => 'TransactionsController@postReport']);
+
+});

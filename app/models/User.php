@@ -34,4 +34,7 @@ class User extends SentryUserModel {
 		return "//gravatar.org/avatar/{$gravatar}";
 	}
 
+	public function transactions(){
+		return $this->hasMany('Transaction');
+	}
 }
