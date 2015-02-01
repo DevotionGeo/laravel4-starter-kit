@@ -6,48 +6,6 @@ Expense Trackings - @parent
 
 @section('content')
 <div class="row">
-	<div class="col-md-2">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4>Total Expense</h4>
-			</div>
-			<div class="panel-body">
-				<strong>Rs. {{ number_format($total_expense, 2) }}</strong>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-7">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4>Expense Transactions</h4>
-			</div>
-			<div class="panel-body">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th class="col-md-2">Date</th>
-							<th class="col-md-2">Amount</th>
-							<th class="col-md-5">Memo</th>
-							<th class="col-md-3"></th>
-						</tr>
-					</thead>
-					<tbody>
-						@foreach($transactions as $transaction)
-						<tr>
-							<td>{{ $transaction->txn_datetime->format(Config::get('app.datetime_format')) }}</td>
-							<td>Rs. {{ number_format($transaction->amount, 2) }}</td>
-							<td>{{ $transaction->memo }}</td>
-							<td>
-								<a href="#" class="btn btn-xs btn-info">edit</a> 
-								<a href="{{ route('transactions.delete', $transaction->id) }}" class="btn btn-xs btn-danger">archive</a> 
-							</td>
-						</tr>
-						@endforeach
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
 	<div class="col-md-3">
 		<div class="panel panel-info">
 			<div class="panel-heading">
@@ -76,6 +34,46 @@ Expense Trackings - @parent
 						<button type="submit" class="btn btn-success form-control">Record</button>
 					</div>
 				</form>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Total Expense</h4>
+			</div>
+			<div class="panel-body">
+				<strong>Rs. {{ number_format($total_expense, 2) }}</strong>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Expense Transactions</h4>
+			</div>
+			<div class="panel-body">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th class="col-md-3">Date</th>
+							<th class="col-md-2">Amount (in Rs.)</th>
+							<th class="col-md-6">Memo</th>
+							<th class="col-md-1"></th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach($transactions as $transaction)
+						<tr>
+							<td>{{ $transaction->txn_datetime->format(Config::get('app.datetime_format')) }}</td>
+							<td>{{ number_format($transaction->amount, 2) }}</td>
+							<td>{{ $transaction->memo }}</td>
+							<td>
+								<a href="#" class="btn btn-xs btn-info">edit</a><br/>
+								<a href="{{ route('transactions.delete', $transaction->id) }}" class="btn btn-xs btn-danger">archive</a> 
+							</td>
+						</tr>
+						@endforeach
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
