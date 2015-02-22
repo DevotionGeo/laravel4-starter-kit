@@ -9,9 +9,9 @@
 			Administration
 			@show
 		</title>
-		<meta name="keywords" content="your, awesome, keywords, here" />
-		<meta name="author" content="Jon Doe" />
-		<meta name="description" content="Lorem ipsum dolor sit amet, nihil fabulas et sea, nam posse menandri scripserit no, mei." />
+		<meta name="keywords" content="laravel, starter kit, laravel admin panel" />
+		<meta name="author" content="Daksh Mehta" />
+		<meta name="description" content="Laravel Starter Kit is platform to get your application kickstarted in no time." />
 
 		<!-- Mobile Specific Metas
 		================================================== -->

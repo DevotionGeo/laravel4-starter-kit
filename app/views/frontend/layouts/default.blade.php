@@ -6,12 +6,12 @@
 		<meta charset="utf-8" />
 		<title>
 			@section('title')
-			Satvik Automation System
+			Laravel Starter Kit
 			@show
 		</title>
 		<meta name="keywords" content="laravel, kit, starter, package" />
-		<meta name="author" content="Romin Interactive - @RominInt" />
-		<meta name="description" content="Satvik Automation System" />
+		<meta name="author" content="Daksh Mehta" />
+		<meta name="description" content="Laravel Starter Kit to kick start laravel powered application" />
 
 		<!-- Mobile Specific Metas
 		================================================== -->
@@ -58,22 +58,14 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <a class="navbar-brand" href="#">Satvik</a>
+			      <a class="navbar-brand" href="{{ route('home') }}">Starter Kit</a>
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
-								Expenses
-								<b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li {{ (Request::is('transactions') ? 'class="active"' : '') }}><a href="{{ route('transactions') }}"><i class="icon-file icon-white"></i> Entry</a></li>
-								<li {{ (Request::is('transactions.report') ? 'class="active"' : '') }}><a href="{{ route('transactions.report') }}"><i class="icon-file icon-white"></i> Report</a></li>
-							</ul>
-						</li>
+			      	<li><a href="{{ url('about-us') }}">About Us</a></li>
+			      	<li><a href="{{ route('contact-us') }}">Contact Us</a></li>
 			      </ul>
 			      <ul class="nav navbar-nav navbar-right">
 						@if (Sentry::check())
