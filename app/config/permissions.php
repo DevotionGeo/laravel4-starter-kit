@@ -16,11 +16,4 @@ return array(
 		),
 	),
 
-	'Expense Tracker' => array(
-		array(
-			'permission' => 'expenses.all',
-			'label' => 'View other\'s expenses',
-		),
-	),
-
 );
